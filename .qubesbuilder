@@ -1,0 +1,4 @@
+vm:
+  deb:
+    build:
+    - debian

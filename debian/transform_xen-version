@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+XL_VER=$(pkg-config --modversion xenlight | cut -d . -f 1-2)
+
+sed -e '/VERSION="/a \
+        if grep -q [^0-] /sys/hypervisor/uuid; then \
+            VERSION='$XL_VER' \
+        fi'

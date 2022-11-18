@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all reproducible=+fixfilepath
+DPKG_EXPORT_BUILDFLAGS = 1
+
+include /usr/share/dpkg/default.mk
+export DESTDIR=$(shell pwd)/debian/tmp
+
+XL_VER=$(shell pkg-config --modversion xenlight | cut -d . -f 1-2)
+
+%:
+	dh $@ --with config-package
+
+override_dh_fixperms:
+	chmod +x debian/xen-utils-guest/usr/lib/xen-common/bin/*.qubes
+	dh_fixperms
+
+override_dh_gencontrol:
+	echo "xen-utils:Depends= xen-utils-$(XL_VER)" >> debian/xen-utils-guest.substvars
+	dh_gencontrol
+

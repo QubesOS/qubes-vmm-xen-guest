@@ -1,0 +1,29 @@
+Source: xen-guest
+Priority: optional
+Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
+Section: admin
+Standards-Version: 3.9.4
+Build-Depends:
+   debhelper (>= 10),
+   config-package-dev,
+   xen-utils-common,
+   libxen-dev
+Homepage: https://xenproject.org/
+
+Package: xen-utils-guest
+Section: admin
+Architecture: amd64 i386 armhf arm64
+Depends:
+    xen-utils-common,
+    ${xen-utils:Depends},
+Provides:
+ ${diverted-files},
+Conflicts:
+ xen-hypervisor-common,
+ ${diverted-files}
+Description: Xen administrative tools - guest files
+ The userspace tools to manage a system virtualized through the Xen virtual
+ machine monitor.
+ .
+ This package is only required on the virtual guest system (Domain U), serving
+ as driver domain.

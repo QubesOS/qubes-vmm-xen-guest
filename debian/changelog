@@ -1,0 +1,5 @@
+xen-guest (1.0-1) UNRELEASED; urgency=medium
+
+  * Initial release.
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sat, 19 Nov 2022 00:29:18 +0100
