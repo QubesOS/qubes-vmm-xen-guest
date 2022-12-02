@@ -6,6 +6,7 @@ Standards-Version: 3.9.4
 Build-Depends:
    debhelper (>= 10),
    config-package-dev,
+   pkg-config,
    xen-utils-common,
    libxen-dev
 Homepage: https://xenproject.org/
