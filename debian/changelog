@@ -1,3 +1,9 @@
+xen-guest (5.0.3-1) unstable; urgency=medium
+
+  * Rebuild for Xen 4.20 in trixie
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Mon, 17 Mar 2025 03:56:18 +0100
+
 xen-guest (5.0.2-1) unstable; urgency=medium
 
   * Rebuild for xen-4.19 in Debian trixie
