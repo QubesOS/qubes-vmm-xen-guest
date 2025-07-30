@@ -1,3 +1,9 @@
+xen-guest (5.0.4-1) unstable; urgency=medium
+
+  * Disable autoballoon in xl.conf
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Wed, 30 Jul 2025 16:32:11 +0200
+
 xen-guest (5.0.3-1) unstable; urgency=medium
 
   * Rebuild for Xen 4.20 in trixie
